@@ -1,20 +1,16 @@
 "use client";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
-
-import { Spotlight } from "./ui/Spotlight";
 import React from 'react';
 
 const words = [
+  { text:"A" },
   { text:"Passionate" },
   { text:"Developer", className: "text-orange-500 dark:text-orange-500" },
 ];
 
 const HeroSection = () => {
   return (
-    <div className="hero bg-base-100 min-h-screen dark:bg-base-900">
-      <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-        <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
-      </div>
+    <div className="hero bg-base-100 min-h-screen dark:bg-base-900 bg-grid-dark dark:bg-grid-light">
       <div className="hero-content text-center">
         <div className="max-w-xl">
           <p>Hi, I'm Nistha 🤗</p>
