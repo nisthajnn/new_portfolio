@@ -1,11 +1,9 @@
 import type { Config } from "tailwindcss";
 const defaultTheme = require("tailwindcss/defaultTheme");
 const svgToDataUri = require("mini-svg-data-uri");
- 
 const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,6 +14,7 @@ const config: Config = {
     extend: {
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        shimmer: "shimmer 2s linear infinite",
       },
       keyframes: {
         spotlight: {
@@ -28,11 +27,18 @@ const config: Config = {
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
@@ -53,7 +59,7 @@ const config: Config = {
           }),
           "bg-dot": (value: any) => ({
             backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
             )}")`,
           }),
         },
@@ -63,7 +69,7 @@ const config: Config = {
   ],
   daisyui: {
     themes: ["black"], // Enable only the dark theme
-    darkTheme: "black", // Set the dark theme as "dark"
+    darkTheme: "black", // Set the dark theme as "black"
     base: true, // Apply background color and foreground color for root element by default
     styled: true, // Include daisyUI colors and design decisions for all components
     utils: true, // Add responsive and modifier utility classes
@@ -72,14 +78,16 @@ const config: Config = {
     themeRoot: ":root", // The element that receives theme color CSS variables
   },
 };
+
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
 }
+
 export default config;

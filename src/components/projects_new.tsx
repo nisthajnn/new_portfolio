@@ -10,7 +10,7 @@ const projects_new = () => {
   return (
     <div>
       <h1 className="mb-2 text-4xl text-center font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-        A Small Selection Of My<span className="text-orange-500 dark:text-orange-500"> Recent Projects</span>
+        A Small Selection Of My<span className="text-emerald-500 dark:text-emerald-500"> Recent Projects</span>
       </h1>
       <section id="projects">
         <div className="mt-5 flex flex-wrap items-center justify-center gap-x-24 gap-y-4 p-4">

@@ -4,17 +4,17 @@ import Text from "@/components/text";
 import Experience from "@/components/experience";
 import Skillsgroup from "@/components/skillsgroup";
 import Projects  from "@/components/projects_new";
+import Contact from "@/components/contact";
 export default function Home() {
   return (
     <main>
      <Navbar></Navbar>
     <HeroSection></HeroSection>
-   
-   
    <Experience></Experience>
    <Projects></Projects>
    <Text></Text>
    <Skillsgroup></Skillsgroup>
+   <Contact></Contact>
     </main>
   );
 }
