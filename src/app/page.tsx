@@ -5,6 +5,8 @@ import Experience from "@/components/experience";
 import Skillsgroup from "@/components/skillsgroup";
 import Projects  from "@/components/projects_new";
 import Contact from "@/components/contact";
+import Icons from "@/components/icons";
+import Footer from "@/components/footer";
 export default function Home() {
   return (
     <main>
@@ -15,6 +17,8 @@ export default function Home() {
    <Text></Text>
    <Skillsgroup></Skillsgroup>
    <Contact></Contact>
+   <Icons></Icons>
+   <Footer></Footer>
     </main>
   );
 }
