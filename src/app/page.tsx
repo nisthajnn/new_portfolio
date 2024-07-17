@@ -7,11 +7,13 @@ import Projects  from "@/components/projects_new";
 import Contact from "@/components/contact";
 import Icons from "@/components/icons";
 import Footer from "@/components/footer";
+import Background from "@/components/background";
 export default function Home() {
   return (
     <main>
      <Navbar></Navbar>
-    <HeroSection></HeroSection>
+     <Background></Background>
+    {/* <HeroSection></HeroSection> */}
    <Experience></Experience>
    <Projects></Projects>
    <Text></Text>
