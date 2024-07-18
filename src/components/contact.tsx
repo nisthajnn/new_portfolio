@@ -3,7 +3,7 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 const words = `"Let's Collaborate and Build Something Amazing Together"`;
 const contact = () => {
   return (
-    <div>
+    <div id="contact">
         <br />
            <h1 className="mb-4 text-4xl text-center font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
         Join My<span className="text-orange-500 dark:text-orange-500"> Network</span>
