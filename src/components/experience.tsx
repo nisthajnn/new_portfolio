@@ -4,7 +4,7 @@ const Experience = () => {
   return (
     <section id='Experience' >
       <h1  className="mb-4 text-4xl text-center font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-        My Work<span className="text-orange-500 dark:text-orange-500"> Experience</span>
+        My Work<span className="text-emerald-500 dark:text-emerald-500"> Experience</span>
       </h1>
       <br />
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
@@ -27,7 +27,8 @@ const Experience = () => {
           <div className="timeline-end mb-10">
             <time className="font-mono italic">August 2024-Present</time>
             <div className="text-lg font-black">Trainee at Utragenic Research and Technologies</div>
-            iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has been the primary part of Apple's consumer desktop offerings since its debut in August 1998 and has evolved through seven distinct forms.
+            Ultragenic brings together Life sciences domain expertise, Third party system knowledge and Deep technology to develop well-defined solutions, which address challenges across the Pharmacovigilance function.
+            Our solutions are agile, flexible and scalable, developed using advance technologies such as AI, Machine learning and Robotic process automation.
           </div>
           <hr />
         </li>

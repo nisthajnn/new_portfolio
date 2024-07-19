@@ -43,7 +43,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end flex items-center">
-          <a className="btn btn-outline text-xl ml-auto">Download Resume</a>
+          <a className="btn btn-outline text-xl ml-auto" href="https://drive.google.com/file/d/1EQAIADeVd7RNCORbPeQGuR5VKNJ9CoHe/view?usp=sharing">Download Resume</a>
           <div className="mobile-menu md:hidden">
             {!navbarOpen ? (
               <button

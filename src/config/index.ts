@@ -5,13 +5,6 @@ export const links = {
   ownerName: "Nistha Jain",
   ownerEmail: "nisthajnn1234@gmail.com",
 } as const;
-export const module = {
-  reactStrictMode: true,
-  images: {
-    domains: ['images.unsplash.com'],
-  },
-};
-
 export const siteConfig: Metadata = {
   title: `${links.ownerName}'s Portfolio`,
   description: "Modern & Minimalist Next.js Portfolio.",
