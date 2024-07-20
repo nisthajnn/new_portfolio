@@ -52,3 +52,11 @@ export const siteConfig: Metadata = {
     name: links.ownerName,
   },
 } as const;
+const nextConfig = {
+  images: {
+    domains: [
+      "api.microlink.io", // Microlink Image Preview
+    ],
+  },
+};
+module.exports = nextConfig;
